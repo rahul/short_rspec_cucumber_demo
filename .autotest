@@ -1,0 +1,8 @@
+require 'autotest/growl'
+require 'autotest/fsevent'
+require 'autotest/restart'
+#require 'redgreen/autotest'
+
+Autotest::Growl::show_modified_files = false
+Autotest::Growl::one_notification_per_run = true
+Autotest::Growl::clear_terminal = true

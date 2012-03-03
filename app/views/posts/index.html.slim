@@ -1,0 +1,26 @@
+#title | This is #{@user.name}'s blog #{@user.blog.title}
+br
+br
+| List of posts
+br
+br
+= link_to 'New Post', new_user_post_path
+br
+br
+table{border=1}
+  thead
+    td ID
+    td Title
+    td Preview
+    td Date created
+  tbody
+    - if @user.blog.posts.empty?
+      tr
+        td{colspan=4} No posts here!
+    - else
+      - @user.blog.posts.each do |p|
+        tr
+          td = p.id
+          td = p.title
+          td = p.body
+          td = p.created_at

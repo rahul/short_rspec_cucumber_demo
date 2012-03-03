@@ -1,0 +1,8 @@
+#title Create new User
+
+= semantic_form_for @user do |f|
+  = f.input :name
+  = f.input :email
+  = f.semantic_fields_for :blog do |b|
+    = b.input :title, :label => 'Blog'
+  = f.submit 'Submit'

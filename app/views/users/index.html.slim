@@ -1,0 +1,6 @@
+| Login here!
+br
+br
+= semantic_form_for @user, :url => login_path do |f|
+  = f.input :email
+  = f.submit 'Login'
